@@ -288,7 +288,7 @@ class BM25Retriever(BaseRetriever):
         verbose=False,
         k1=2.0,
         b=0.75,
-        floor=None,
+        # floor=None,
     ):
 
         self.lowercase = lowercase
@@ -302,7 +302,7 @@ class BM25Retriever(BaseRetriever):
         self.vocabulary = vocabulary
         self.k1 = k1
         self.b = b
-        self.floor = floor
+        # self.floor = floor
 
         vectorizer = BM25Vectorizer(
             lowercase=self.lowercase,
@@ -316,7 +316,7 @@ class BM25Retriever(BaseRetriever):
             vocabulary=self.vocabulary,
             k1=self.k1,
             b=self.b,
-            floor=self.floor,
+            # floor=self.floor,
         )
         super().__init__(vectorizer, top_n, verbose)
 
